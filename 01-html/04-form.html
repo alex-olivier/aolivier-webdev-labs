@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -9,7 +9,69 @@
   <body>
     <main>
       <form action="/submit">
-        <!-- Add your code here -->
+        <h1>Form</h1>
+        <p>
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" placeholder="Full Name" />
+        </p>
+
+        <p>
+          <label for="email">Email:</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="name@pdx.edu"
+          />
+        </p>
+
+        <fieldset>
+          <legend><strong>Favorite Character:</strong></legend>
+
+          <p>
+            <label>
+              <input type="radio" name="favorite_character" value="spongebob" />
+              Spongebob
+            </label>
+          </p>
+
+          <p>
+            <label>
+              <input type="radio" name="favorite_character" value="sandy" />
+              Sandy
+            </label>
+          </p>
+
+          <p>
+            <label>
+              <input type="radio" name="favorite_character" value="patrick" />
+              Patrick
+            </label>
+          </p>
+        </fieldset>
+
+        <fieldset>
+          <legend><strong>Are you a fan of the show?</strong></legend>
+
+          <p>
+            <label>
+              <input type="checkbox" name="fan_all_episodes" value="yes" />
+              Yes, I have watched all episodes!
+            </label>
+          </p>
+
+          <p>
+            <label>
+              <input type="checkbox" name="fan_memes" value="yes" />
+              Yes, it's got the best memes.
+            </label>
+          </p>
+        </fieldset>
+
+        <p>
+          <button type="submit">Submit</button>
+          <button type="reset">Reset</button>
+        </p>
       </form>
     </main>
   </body>

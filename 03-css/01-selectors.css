@@ -10,12 +10,50 @@
 
 /* Use attribute selectors for the first part of the exercise */
 
-li[class] {
-  color: var(--red);
+/* target by attribute value rather than simple class selectors */
+li[class='dog'] {
+  color: var(--teal);
+}
+
+li[id='cat'] {
+  color: var(--royalblue);
+}
+
+li[class='parrot'] {
+  color: var(--violet);
+}
+
+li[class='donkey'] {
+  color: var(--green);
+}
+
+li[class='hedgehog'] {
+  color: var(--magenta);
+}
+
+/* item that lists all three animals matches multiple class tokens */
+li[class~='dog'][class~='cat'][class~='parrot'] {
+  color: var(--magenta);
 }
 
 /* Use descendant, child, and sibling selectors for the second part */
 
-section li {
+.list-food > ol > li {
+  color: var(--teal);
+}
+
+.list-food > ol > li + li {
+  color: var(--royalblue);
+}
+
+.list-food > ol > li + li + li {
+  color: var(--violet);
+}
+
+.list-food > ol > li + li + li + li {
+  color: var(--magenta);
+}
+
+.list-food + .list-cleaning ol li {
   color: var(--green);
 }

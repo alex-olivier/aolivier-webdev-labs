@@ -16,9 +16,9 @@
 }
 
 .paragraph::first-letter {
-  float: left;
+  display: block;
   font-size: 64px;
-  line-height: 0.9;
-  padding-right: 6px;
+  line-height: 1;
+  margin-bottom: 4px;
   color: #444;
 }

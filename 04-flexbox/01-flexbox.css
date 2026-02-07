@@ -13,12 +13,44 @@
 
 /* Flex Container 2 */
 
+.flex-container-2 {
+  display: flex;
+  flex-direction: row-reverse;
+  flex-wrap: wrap;
+  /* With row-reverse, flex-start is the RIGHT side. */
+  justify-content: flex-start;
+}
+
 /* Flex Container 3 */
 /* use height: 400px; on the container */
 
+.flex-container-3 {
+  display: flex;
+  flex-direction: column-reverse;
+  flex-wrap: wrap;
+  height: 400px;
+  /* With column-reverse, flex-end is the TOP. */
+  justify-content: flex-end;
+  /* Push the wrapped columns apart (left and right). */
+  align-content: space-between;
+}
+
 /* Flex Container 4 */
 
+.flex-container-4 {
+  display: flex;
+  flex-wrap: wrap-reverse;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
 /* Flex Container 5 */
+
+.flex-container-5 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 
 /* Flex Container 6 */
 
@@ -27,3 +59,13 @@
 }
 
 /* use height: 300px; on the container */
+
+.flex-container-6 {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  height: 300px;
+  align-content: space-between;
+}
+
+ 

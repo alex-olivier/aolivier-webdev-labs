@@ -14,28 +14,13 @@
   display: flex;
   align-items: center;
   justify-content: center;
-
-  font-size: 72px;
-  line-height: 1;
-}
-
-.flex-item-2 {
-  background-color: purple;
-  color: white;
-
-  /* center the number */
-  display: flex;
-  align-items: center;
-  justify-content: right;
-
-  font-size: 72px;
   line-height: 1;
 }
 
 /* Default “square” size used by containers 1–4 */
 .flex-container-1 .flex-item,
 .flex-container-2 .flex-item,
-.flex-container-3 .flex-item-2,
+.flex-container-3 .flex-item,
 .flex-container-4 .flex-item {
   width: 220px;
   height: 220px;
@@ -49,6 +34,10 @@
 .flex-container-5,
 .flex-container-6 {
   gap: 20px;
+  max-width: 1380px;
+  min-width: 1380px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* Flex Container 1 */
@@ -58,9 +47,6 @@
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
-  max-width: 1380px;
-  margin-left: auto;
-  margin-right: auto;
 }
 
 /* Flex Container 2 */
@@ -70,22 +56,26 @@
   flex-direction: row-reverse;
   flex-wrap: wrap;
   justify-content: flex-start; /* with row-reverse, this packs to the right */
-  max-width: 1380px;
-  margin-left: auto;
-  margin-right: auto;
 }
 
 /* Flex Container 3 */
-/* use height: 940px; on the container */
+/* use height: 400px; on the container */
 
 .flex-container-3 {
-  box-sizing: content-box;      /* ensures 4 items fit per column */
+  box-sizing: content-box;
   display: flex;
   flex-direction: column-reverse;
   flex-wrap: wrap;
-  height: 460px;
+  height: 400px;
+  align-content: flex-end;
+  column-gap: 60px;
 
-  align-content: space-between;
+}
+
+.flex-container-3 .flex-item {
+  width: 160px;
+  height: 80px;
+  margin: 0;
 }
 
 /* Flex Container 4 */
@@ -95,9 +85,6 @@
   flex-wrap: wrap-reverse;        /* second row appears above first */
   justify-content: space-evenly;
   align-items: flex-start;
-  max-width: 1380px;
-  margin-left: auto;
-  margin-right: auto;
 }
 
 /* Flex Container 5 */
@@ -132,14 +119,20 @@
 }
 
 /* Flex Container 6 */
-/* use height: 460px; on the container */
+/* use height: 300px; on the container */
+
+.flex-container-6 .flex-item {
+  width: 400px;
+  height: 80px;
+  margin: 0;
+}
 
 .flex-container-6 {
-  box-sizing: content-box;      /* ✅ ensures 3 items fit per column */
+  box-sizing: content-box;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  height: 460px;
+  height: 300px;
 
   align-content: space-between;
 }

@@ -4,17 +4,6 @@
   margin: 16px 0 48px;
 }
 
-.flex-item {
-  background-color: purple;
-  color: white;
-
-  /* center the number
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  line-height: 1; */
-}
-
 /* Default “square” size used by containers 1–4 */
 .flex-container-1 .flex-item,
 .flex-container-2 .flex-item,
@@ -34,7 +23,6 @@
   gap: 20px;
   max-width: 1380px;
   min-width: 1380px;
-  margin-left: auto;
   margin-right: auto;
 }
 
@@ -60,7 +48,7 @@
 /* use height: 400px; on the container */
 
 .flex-container-3 .flex-item {
-  width: 160px;
+  width: 120px;
   height: 80px;
   margin: 0;
 }
@@ -72,7 +60,7 @@
   flex-wrap: wrap;
   height: 400px;
   align-content: flex-end;
-  column-gap: 240px;
+  column-gap: 40%;
 
 }
 

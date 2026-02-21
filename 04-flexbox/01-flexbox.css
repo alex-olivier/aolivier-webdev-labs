@@ -1,4 +1,4 @@
-/* ===== Shared base styles (so the items look like the screenshots) ===== */
+/* Shared base styles (so the items look like the screenshots) */
 
 .flex-container {
   background-color: rgb(190, 190, 231);
@@ -19,10 +19,23 @@
   line-height: 1;
 }
 
+.flex-item-2 {
+  background-color: purple;
+  color: white;
+
+  /* center the number */
+  display: flex;
+  align-items: center;
+  justify-content: right;
+
+  font-size: 72px;
+  line-height: 1;
+}
+
 /* Default “square” size used by containers 1–4 */
 .flex-container-1 .flex-item,
 .flex-container-2 .flex-item,
-.flex-container-3 .flex-item,
+.flex-container-3 .flex-item-2,
 .flex-container-4 .flex-item {
   width: 220px;
   height: 220px;
@@ -38,47 +51,56 @@
   gap: 20px;
 }
 
-/* ===== Flex Container 1 ===== */
+/* Flex Container 1 */
 
 .flex-container-1 {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
+  max-width: 1380px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-/* ===== Flex Container 2 ===== */
+/* Flex Container 2 */
 
 .flex-container-2 {
   display: flex;
   flex-direction: row-reverse;
   flex-wrap: wrap;
   justify-content: flex-start; /* with row-reverse, this packs to the right */
+  max-width: 1380px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-/* ===== Flex Container 3 ===== */
-/* use height: 400px; on the container */
+/* Flex Container 3 */
+/* use height: 940px; on the container */
 
 .flex-container-3 {
+  box-sizing: content-box;      /* ensures 4 items fit per column */
   display: flex;
   flex-direction: column-reverse;
   flex-wrap: wrap;
-  height: 400px;
+  height: 460px;
 
-  justify-content: flex-end;      /* with column-reverse, this pushes to the top */
-  align-content: space-between;   /* space between the two columns */
+  align-content: space-between;
 }
 
-/* ===== Flex Container 4 ===== */
+/* Flex Container 4 */
 
 .flex-container-4 {
   display: flex;
   flex-wrap: wrap-reverse;        /* second row appears above first */
-  justify-content: space-between;
+  justify-content: space-evenly;
   align-items: flex-start;
+  max-width: 1380px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-/* ===== Flex Container 5 ===== */
+/* Flex Container 5 */
 /* Different sizes + bottom-aligned like the reference */
 
 .flex-container-5 {
@@ -109,19 +131,15 @@
   height: 220px;
 }
 
-/* ===== Flex Container 6 ===== */
-
-.flex-container-6 .flex-item {
-  width: 400px;
-  height: 90px; /* ensures 3 items fit into 300px height */
-}
-
-/* use height: 300px; on the container */
+/* Flex Container 6 */
+/* use height: 460px; on the container */
 
 .flex-container-6 {
+  box-sizing: content-box;      /* ✅ ensures 3 items fit per column */
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  height: 300px;
+  height: 460px;
+
   align-content: space-between;
 }
